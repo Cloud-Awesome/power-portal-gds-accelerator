@@ -7,6 +7,8 @@ The portal configuration can be imported using the [Configuration Migration Tool
 
 Look here for installation details: **[Installation](documentation/installation.md)**
 
+[[[ Put a sample screenshot - e,g. a Task List page - the functional website ]]]
+
 ## Configuration Entities
 
 These are the bare minimum entities required:
