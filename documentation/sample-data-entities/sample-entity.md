@@ -8,7 +8,7 @@ The sample entity contains the following attributes:
 
 
 | Friendly Name | Schema Name | Data Type |
-|: --- |: --- |: --- |
+| :--- | :--- | :--- |
 | Name | awe_name | string |
 | ... | ... | whole number |
 | ... | ... | optionset |
