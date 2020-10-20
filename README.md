@@ -1,4 +1,5 @@
-# d365-portals-gds-framework
+# Power Portal GDS Accelerator 
+
 Base framework for a Dynamics 365/PowerApps Portal using GDS styling and patterns
 
 Importing the sample solution and all data gives you a fully functional portal with example pages for further extension
