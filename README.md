@@ -48,12 +48,6 @@ Details can be found here:
 
 [Sample Entity Data](documentation/sample-data-entities/sample-entity.md)
 
-## Feedback and Suggestions
-
-I'm always happy to receive feedback, bug reports or any pull requests submitted.
-
-Hope this repo helps someone get up and running faster and if there's something manual that is taking more time to get up and running, let me know!
-
 ## Best practices on GDS Power Portals
 
 - Don't use Web Forms, and why
@@ -65,4 +59,9 @@ Hope this repo helps someone get up and running faster and if there's something 
 - Include "Check your answers" pages even if it's one page if it keeps the whole section consistent
 - Test your UX regularly and often with end users
 
+## Feedback and Suggestions
+
+I'm always happy to receive feedback, bug reports or any pull requests submitted.
+
+Hope this repo helps someone get up and running faster and if there's something manual that is taking more time to get up and running, let me know!
 
