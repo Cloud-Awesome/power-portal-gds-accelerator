@@ -24,6 +24,8 @@ These are the bare minimum entities required:
 
 [Site Settings](documentation/configuration-entities/site-settings.md)
 
+[Content Snippets]()
+
 Including these entities will also provide sample pages and dependant data required to give a functional set of pro forma pages for extension:
 
 [Web Pages](documentation/configuration-entities/web-pages.md)
@@ -36,7 +38,7 @@ And finally, these entities require the sample solution and data to be installed
 
 [Entity Lists](documentation/configuration-entities/entity-lists.md)
 
-Usually, for each new portal I create I import everything to up and running and then trim/delete things I don't need as I progress through the build.
+Usually, for each new portal I create I import everything to get up and running and then trim/delete things I don't need as I progress through the build. It's usually easier to start with something functional than with the foundation only and a blank page. 
 
 ## Sample solution and data
 
