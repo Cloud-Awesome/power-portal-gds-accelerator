@@ -1,0 +1,13 @@
+@import "../node_modules/govuk-frontend/govuk/all";
+
+.form-control{
+  @extend .govuk-input;
+}
+
+.text{
+  @extend .govuk-input--width-10;
+}
+
+.number {
+  @extend .govuk-input--width-4;
+}

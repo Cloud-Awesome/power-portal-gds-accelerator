@@ -1,0 +1,19 @@
+{% extends 'gds-base' %}
+{% block headerblock %}
+
+    <span class="govuk-caption-xl">{{ page.adx_meta_description }}</span>
+    <h1 class="govuk-heading-xl">{{ page.adx_title }}</h1>
+
+    <div class="govuk-body-lead">
+        {{ page.adx_summary }}
+    </div>
+
+    <div class="govuk-body">
+        {{ page.adx_copy }}
+    </div>
+
+    {% if settings["LoadExternalCopy"] == "true" | default: false %}
+        {% include 'LoadExternalCopy' %}
+    {% endif %}
+
+{% endblock %}

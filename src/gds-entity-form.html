@@ -1,0 +1,6 @@
+{% extends 'gds-standard-page' %}
+{% block entityformblock %}
+    {% if page.adx_entityform %}
+        {% entityform id: page.adx_entityform.id %}
+    {% endif %}
+{% endblock %}
