@@ -1,0 +1,11 @@
+<script>
+    $(function () {
+        let includes = $('[data-include]');
+        let copyBaseUrl = '{{ settings["ExternalCopy/BaseUrl"] }}';
+
+        $.each(includes, function () {
+            let file = copyBaseUrl + $(this).data('include') + '.html';
+            $(this).load(file);
+        });
+    })
+</script>
