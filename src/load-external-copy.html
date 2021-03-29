@@ -4,6 +4,7 @@
         let copyBaseUrl = '{{ settings["ExternalCopy/BaseUrl"] }}';
 
         $.each(includes, function () {
+            // only supporting html files
             let file = copyBaseUrl + $(this).data('include') + '.html';
             $(this).load(file);
         });
