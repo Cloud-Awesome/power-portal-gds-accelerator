@@ -1,0 +1,23 @@
+- adx_adddescription: false
+  adx_attributelogicalname: emailaddress2
+  adx_entityform: ee976cb5-595b-eb11-a812-00224840f4d1
+  adx_entityformmetadataid: 8bc489b8-6561-eb11-a812-000d3ad5c837
+  adx_fieldisrequired: false
+  adx_ignoredefaultvalue: false
+  adx_randomizeoptionsetvalues: false
+  adx_setvalueonsave: false
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: true
+  adx_validationregularexpression: ^[^<>%$]*$
+  adx_validationregularexpressionerrormessage: >-
+    [
+
+      {
+
+        "LCID": 1033,
+
+        "Value": "Personal email address includes invalid characters"
+
+      }
+
+    ]

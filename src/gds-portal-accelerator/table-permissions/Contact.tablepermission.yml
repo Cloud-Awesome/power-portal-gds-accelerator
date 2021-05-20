@@ -1,0 +1,12 @@
+adx_append: false
+adx_appendto: false
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: contact
+adx_entityname: Contact
+adx_entitypermission_webrole:
+- 3af20681-fc11-4e19-8bdc-f7416d37cf61
+adx_entitypermissionid: 1460b82c-73db-e711-a94d-000d3a2bb81e
+adx_read: true
+adx_scope: 756150004
+adx_write: false

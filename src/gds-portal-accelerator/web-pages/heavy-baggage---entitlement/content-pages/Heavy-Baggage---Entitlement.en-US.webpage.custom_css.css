@@ -1,0 +1,15 @@
+input[value="I do not wish to take up my heavy baggage entitlement"] {
+    background:none!important;
+    border:none; 
+    padding:0!important;
+    cursor:pointer;
+    color:#069;
+    box-shadow: none;
+    width: 450px;
+    text-align: left;
+}
+
+input[value="I do not wish to take up my heavy baggage entitlement"]:hover {
+  color:#069;
+  text-decoration:underline;
+}

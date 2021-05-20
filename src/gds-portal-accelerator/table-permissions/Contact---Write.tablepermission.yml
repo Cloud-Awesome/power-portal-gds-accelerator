@@ -1,0 +1,13 @@
+adx_append: false
+adx_appendto: false
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: contact
+adx_entityname: Contact - Write
+adx_entitypermission_webrole:
+- 47e79d51-95f4-e711-a952-000d3a2bb91c
+- 3af20681-fc11-4e19-8bdc-f7416d37cf61
+adx_entitypermissionid: 2f03f472-95f4-e711-a952-000d3a2bb91c
+adx_read: false
+adx_scope: 756150004
+adx_write: true

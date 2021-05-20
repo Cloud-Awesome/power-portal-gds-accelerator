@@ -1,0 +1,116 @@
+{% extends 'GDS Standard Page Template' %}
+
+{% block mainblock %}
+
+	{% assign optionalSamples = request.params["sample"] %}
+
+	{% if optionalSamples == "happy" %}
+		<div class="cleared-to-travel" style="padding-top: 10px;padding-bottom: 10px;padding-left: 15px;padding-right: 15px;margin-bottom: 10px">
+			<ul>
+				<p style="margin-bottom: 2px;"><span style="color: #006435; font-size: 36px;">✔</span> <strong class="bold-medium">Cleared to travel</strong></p>
+				<p>This person has a valid travel certificate and is cleared for travel</p>
+			</ul>
+		</div>
+	{% endif %}
+
+	{% if optionalSamples == "unhappy" %}
+		<div class="not-cleared-to-travel" style="padding-top: 10px;padding-bottom: 10px;padding-left: 15px;padding-right: 15px;">
+			<ul>				
+				<p style="margin-bottom: 2px;"><span style="color: #F47738; font-size: 36px;">⚠</span> <strong class="bold-medium">Not cleared to travel</strong></p>
+				<p>This person has not passed the required certifications and is not cleared to travel</p>
+			</ul>
+		</div>
+	{% endif %}
+
+	{% assign links = weblinks[page.adx_navigation.id] %}
+    <ol class="task-list">
+		<!-- List "title" links (i.e. those with no parent, in display order -->
+		{% for link in links.weblinks %}
+			<li>
+				<h2 class="task-list-section">
+					<span class="task-list-section-number">
+						{{ link["adx_displayorder"] }}. 
+					</span> {{ link.name }}
+				</h2>
+				<ul class="task-list-items">
+					<!-- Put a link for each child link -->
+					{% for child_link in link.weblinks %}
+						<li class="task-list-item">
+							<a class="task-name" href="{{ child_link.url }}">
+									{{ child_link.name }}
+							</a>
+							<strong class="task-completed" id="eligibility-completed">Complete</strong>
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+	</ol>
+
+	<style>
+		.not-cleared-to-travel {
+			border: 5px solid #b58840;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			padding: 20px 15px 15px;
+		}
+		
+		.cleared-to-travel {
+			border: 5px solid #005ea5;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			padding: 20px 15px 15px;
+		}
+		
+		.pending-clearance {
+			background-color: #b58840;
+			text-decoration: none;
+		}
+		
+		.fcomp-cleared {
+			text-decoration: none;
+		}
+		
+		.not-started {
+			background-color: #DEE0E2;
+			color: #000000;
+			
+		}
+	</style>
+{% endblock %}
+
+{% block sidebar %}
+
+	{% if request.params["sidebar"] == true %}
+		<!-- Get all sidebar links -->
+		{% assign sidebar = weblinks["Task List Sidebar"] %}
+		<aside class="govuk-related-items" role="complementary" style="margin-top: 0.1em;">
+			{% editable snippets "Task List/Sidebar/Header" %}
+			<nav role="navigation">
+				<ul style="font-size: 14px;">
+					{% for sidelink in sidebar.weblinks %}
+						<li>
+							<a href="{{ sidelink.url }}">{{ sidelink.name }}</a>
+						</li>
+					{% endfor %}
+					<li>
+					<a href="{% if homeurl%}/{{ homeurl }}{% endif %}{{ website.sign_out_url_substitution }}" title="{% editable  snippets"links/logout" | default:resx["Sign_Out"] | escape %}">
+						{% editable snippets "links/logout" | default:resx["Sign_Out"] | escape %}
+					</a>
+					</li>
+				</ul>
+				{% if params["debug"] == "true" %}
+					<hr/>
+					<div id="debug-info" style="font-size: 14px">
+					<ul class="list list-bullet">
+						<li>Journey Type: {{ contact_record["j.fco_journeytype"].label }}</li>
+						<li>Name: {{ user["fullname"] }}</li>
+						<li>User ID: {{ user["contactid"] }}</li>
+					</ul>
+					</div>
+				{% endif %}
+			</nav>
+		</aside>
+	{% endif %}
+
+{% endblock %}

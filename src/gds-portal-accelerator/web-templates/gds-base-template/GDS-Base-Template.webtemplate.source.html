@@ -1,0 +1,21 @@
+<main id="content" role="main">
+	<div class="page-heading">
+		<div class="column-two-thirds">
+			{% comment %}h1, lede and copy{% endcomment %}
+			{% block headerblock %}{% endblock %}
+			<!-- forms and assets -->
+			{% block mainblock %}{% endblock %}
+			<!-- entity form -->
+			{% block entityformblock %}{% endblock %}
+		</div>
+		<!-- 
+			Use this block when creating custom web templates that require extra 
+			content below the usual form and buttons
+		 -->
+		{% block customblock %}{% endblock %}
+  	</div>
+  	<div class="column-third add-title-margin">
+  		{% block sidebar %}{% endblock %}
+  	</div>
+</main>
+{% include 'LoadExternalCopy' %}

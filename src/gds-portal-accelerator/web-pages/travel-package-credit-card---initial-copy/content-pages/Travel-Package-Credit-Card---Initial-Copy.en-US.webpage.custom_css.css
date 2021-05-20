@@ -1,0 +1,15 @@
+th {
+  display: none;
+}
+
+td[data-attribute="fco_cost"] {
+  height: 54px;
+  font-size: 46px;
+  font-weight: bold;
+  background: #fff;
+  padding-top: 0.1px;
+}
+
+.tab.clearfix {
+  margin-bottom: 0px;
+}

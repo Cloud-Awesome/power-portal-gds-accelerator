@@ -1,0 +1,12 @@
+adx_append: false
+adx_appendto: false
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: awe_slot
+adx_entityname: BookingSlots/Read
+adx_entitypermission_webrole:
+- 3af20681-fc11-4e19-8bdc-f7416d37cf61
+adx_entitypermissionid: dd592acc-4570-eb11-a812-00224840eb43
+adx_read: true
+adx_scope: 756150000
+adx_write: false

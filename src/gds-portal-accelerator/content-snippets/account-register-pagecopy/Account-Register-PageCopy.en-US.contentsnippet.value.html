@@ -1,0 +1,22 @@
+<main id="content" role="main">
+	<div class="column-two-thirds" id="mp-pre-login">
+		<div class="page-heading">
+	    <div class="section-header">
+	      {{ snippets["Profile/Section Header"] }}
+	    </div>
+      <h1 class="heading-xlarge">{{ snippets["Profile/Landing Page/Header"] }}</h1>
+      <p class="lede">{{ snippets["Profile/Landing Page/Lead Text"] }}</p>
+    </div>
+	  <p>{{ snippets["Profile/Landing Page/Instructions"] }}</p>
+	</div>
+</main>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var loginButton = $(".btn.btn-primary.btn-line");
+    $("#mp-pre-login").append(loginButton);
+    loginButton.text("Continue");
+    loginButton.addClass("button");
+    $("#ContentContainer_MainContent_MainContent_SecureRegister").hide();
+  });
+</script>

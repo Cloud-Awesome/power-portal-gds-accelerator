@@ -1,0 +1,72 @@
+<footer class="group js-footer" id="footer" role="contentinfo">
+  <div class="footer-wrapper">
+	<div class="footer-meta">
+	  <div class="footer-meta-inner">
+		<div class="open-government-licence">
+		  <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+			<p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+		</div>
+	  </div>
+	  <div class="copyright">
+		<a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">&copy; Crown copyright</a>
+	  </div>
+	</div>
+  </div>
+
+	
+  
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+    
+      // GDS Radio Button "Styling" =D
+      $(".crmEntityFormView .picklist").each(function (index, picklistRadio) {
+          $(picklistRadio).children("input").each(function (index2, input) {
+              $(picklistRadio).children("input[id='" + input.id + "'],label[for='" + input.id + "']").wrapAll("<div class='multiple-choice' />");
+          });
+      });
+  
+			// GDS Boolean Radio Button "Styling"
+      $(".crmEntityFormView .boolean-radio").each(function (index, booleanradio) {
+          $(booleanradio).children("input").each(function (index2, input) {
+              $(booleanradio).children("input[id='" + input.id + "'],label[for='" + input.id + "']").wrapAll("<div class='multiple-choice' />");
+          });
+      });
+  	
+			// GDS Check Box "Styling"
+			$(".crmEntityFormView .checkbox").each(function (index, checkBox) {
+          $(checkBox).children("input").each(function (index2, input) {
+              $(checkBox).children("input[id='" + input.id + "'],label[for='" + input.id + "']").wrapAll("<div class='multiple-choice' />");
+  			      // Move label into same Div as input
+  			      $("#" + input.id).after($("#" + input.id + "_label"))
+          });
+      });
+      
+      // GDS Start Here Button
+      $("input[value='Start now']").addClass("button-start");
+
+		});
+
+		if (window.jQuery) {
+			(function ($) {
+				if (typeof (entityFormClientValidate) != 'undefined') {
+					var originalValidationFunction = entityFormClientValidate;
+					
+					if (originalValidationFunction && typeof (originalValidationFunction) == "function") {
+						entityFormClientValidate = function () {
+
+							$("input").each(function() {
+								$(this).val($(this).val().replace(">","&lt;").replace("<","&gt;"));
+								console.log($(this).val());
+							});
+							
+							originalValidationFunction.apply(this, arguments);
+							return true;
+						};
+					}
+				}
+			}(window.jQuery));
+		}
+  </script>
+  
+</footer>

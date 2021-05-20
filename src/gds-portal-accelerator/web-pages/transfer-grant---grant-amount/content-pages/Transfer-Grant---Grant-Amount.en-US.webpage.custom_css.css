@@ -1,0 +1,13 @@
+input[value="I don't want to apply for a grant"] {
+    background:none!important;
+    border:none; 
+    padding:0!important;
+    cursor:pointer;
+    color:#069;
+    box-shadow: none;
+}
+
+input[value="I don't want to apply for a grant"]:hover {
+  color:#069;
+  text-decoration:underline;
+}

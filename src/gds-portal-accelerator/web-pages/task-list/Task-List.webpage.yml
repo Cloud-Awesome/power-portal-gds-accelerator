@@ -1,0 +1,12 @@
+adx_enablerating: false
+adx_enabletracking: false
+adx_excludefromsearch: false
+adx_hiddenfromsitemap: false
+adx_isroot: true
+adx_name: Task List
+adx_pagetemplateid: 46d41bfc-47bd-ea11-a812-000d3a7fedbe
+adx_parentpageid: 394d2396-7be6-4ee0-bf79-527c8962c7cc
+adx_partialurl: task-list
+adx_publishingstateid: ed67356b-a2db-49a9-b26d-4c8a59e3d9a7
+adx_sharedpageconfiguration: true
+adx_webpageid: 05baa148-9559-eb11-a812-00224840f4d1

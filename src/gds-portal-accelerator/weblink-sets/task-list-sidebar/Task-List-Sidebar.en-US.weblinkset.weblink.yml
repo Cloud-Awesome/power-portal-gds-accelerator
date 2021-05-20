@@ -1,0 +1,41 @@
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 4
+  adx_displaypagechildlinks: false
+  adx_externalurl: https://www.google.co.uk?q=Help me Obi-Wan Kenobi, you're my only hope
+  adx_name: Intranet guidance
+  adx_openinnewwindow: true
+  adx_publishingstateid: ed67356b-a2db-49a9-b26d-4c8a59e3d9a7
+  adx_robotsfollowlink: true
+  adx_weblinkid: 58476f8a-690b-e811-a9b5-000d3a2bb1de
+  adx_weblinksetid: 2df7cccd-acda-e711-a94d-000d3a2bb81e
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 2
+  adx_displaypagechildlinks: false
+  adx_name: Terms and conditions
+  adx_openinnewwindow: false
+  adx_publishingstateid: ed67356b-a2db-49a9-b26d-4c8a59e3d9a7
+  adx_robotsfollowlink: true
+  adx_weblinkid: 5ec0a214-adda-e711-a94d-000d3a2bb81e
+  adx_weblinksetid: 2df7cccd-acda-e711-a94d-000d3a2bb81e
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 1
+  adx_displaypagechildlinks: false
+  adx_name: My details
+  adx_openinnewwindow: false
+  adx_publishingstateid: ed67356b-a2db-49a9-b26d-4c8a59e3d9a7
+  adx_robotsfollowlink: true
+  adx_weblinkid: 698414f1-acda-e711-a94d-000d3a2bb81e
+  adx_weblinksetid: 2df7cccd-acda-e711-a94d-000d3a2bb81e
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 5
+  adx_displaypagechildlinks: false
+  adx_name: Cookies
+  adx_openinnewwindow: false
+  adx_publishingstateid: ed67356b-a2db-49a9-b26d-4c8a59e3d9a7
+  adx_robotsfollowlink: true
+  adx_weblinkid: c3b8ba0c-f92d-e811-a9bf-000d3a2bb91c
+  adx_weblinksetid: 2df7cccd-acda-e711-a94d-000d3a2bb81e

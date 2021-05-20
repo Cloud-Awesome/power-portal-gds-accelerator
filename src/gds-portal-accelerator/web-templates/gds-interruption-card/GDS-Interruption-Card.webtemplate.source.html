@@ -1,0 +1,50 @@
+{% extends 'GDS Base Template' %}
+
+{% block mainblock %}
+    <div class="flash-card">
+        <h1 class="heading-large">{{ page.adx_title }}</h1>
+        <p>{{ page.adx_copy }}</p>
+        {% entityform id: page.adx_entityform.id %}
+    </div>
+
+    <style>
+        #UpdateButton {
+            color: #005ea5;
+            background-color: #fff;
+            box-shadow: none;
+        }
+
+        .flash-card {
+            width: 100%;
+            margin-top: 1em;
+            padding: 30px;
+            background-color: #005ea5;
+            color: #fff;
+            .heading-large {
+                color: #fff;
+            }
+            a {
+                color: #fff;
+                &:visited, &:hover, &:active {
+                    color: #fff; }
+            }
+            details {
+                margin-bottom: 1em;
+                summary {
+                    color: #fff;
+                }
+                .panel {
+                    border-left-color: #fff;
+                }
+            }   
+        }
+
+        @media (min-width: 769px) {
+            .flash-card {
+                margin-top: 1.25em;
+                padding: 60px;
+            }
+        }
+
+    </style>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'GDS EntityForm Template' %}
+{% block mainblock %}
+
+    <div class="column-half">
+      <h3 class="heading-small">{% editable snippets "contact-details/check-your-answers/2" type:"text" %}</h2>
+    </div>
+    <div class="column-half change-details" align="right">
+      <a target="_self" href="/task-list/contact-details/phone-numbers">Change</a>
+    </div>
+	  <table class="table table-striped">
+      <tbody>
+        <tr>
+          <th scope="row">Home phone</th>
+          <td>{{user["telephone1"]}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Work phone</th>
+          <td>{{ user["telephone2"] }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="column-half">
+      <h3 class="heading-small">{% editable snippets "contact-details/check-your-answers/3" type:"text" %}</h2>
+    </div>
+    <div class="column-half change-details" align="right">
+      <a target="_self" href="/task-list/contact-details/email-addresses">Change</a>
+    </div>
+	  <table class="table table-striped">
+      <tbody>
+        <tr>
+          <th scope="row">Personal email address</th>
+          <td>{{user["emailaddress2"]}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Work email address</th>
+          <td>{{ user["emailaddress1"] }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <style>
+      .change-details {
+        margin-top: 20px;
+        margin-bottom: 5.938px;
+      }
+    </style>
+
+{% endblock %}

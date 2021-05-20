@@ -1,0 +1,34 @@
+- adx_adddescription: true
+  adx_attributelogicalname: telephone1
+  adx_description: >-
+    [
+
+      {
+
+        "LCID": 1033,
+
+        "Value": "Work phone number is mandatory"
+
+      }
+
+    ]
+  adx_entityform: 0c9ffc96-595b-eb11-a812-00224840f4d1
+  adx_entityformmetadataid: 12f1d433-0460-eb11-a812-000d3ad6089d
+  adx_fieldisrequired: true
+  adx_ignoredefaultvalue: false
+  adx_randomizeoptionsetvalues: false
+  adx_requiredfieldvalidationerrormessage: >-
+    [
+
+      {
+
+        "LCID": 1033,
+
+        "Value": "Work phone number is mandatory. You must fill this in before continuing"
+
+      }
+
+    ]
+  adx_setvalueonsave: false
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: false
