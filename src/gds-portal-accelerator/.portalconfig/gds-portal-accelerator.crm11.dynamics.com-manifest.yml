@@ -1499,7 +1499,7 @@ adx_webtemplate:
   IsDeleted: false
 - RecordId: 6cf9133e-3bbd-ea11-a812-000d3a0bad7c
   DisplayName: GDS Base Template
-  CheckSum: 41108d243c19496a400e4d16b2b02a3024de6e040057c4e2e26ad4a0947c99ba
+  CheckSum: cc20f0f9f4d6db2c79f588628320662eac4879e909168d101138dc4a9750dee1
   IsDeleted: false
 - RecordId: 811be9a0-f25b-eb11-a812-00224840f4d1
   DisplayName: GDS Service Start
@@ -1531,7 +1531,7 @@ adx_webtemplate:
   IsDeleted: false
 - RecordId: c0bb5e6c-f49d-eb11-b1ac-000d3ad5f762
   DisplayName: B2C Login
-  CheckSum: e0fdd467a0726c7723fd5d80c7f45c8e0fa2401ad1cdc0a2c8a19aca78682aaa
+  CheckSum: b802fea70c6aa6713eb637a62e2afd978c7d7c92decdf7e2c5bbb53265e83138
   IsDeleted: false
 - RecordId: d09ee606-b059-eb11-a812-00224840f4d1
   DisplayName: GDS Interruption Card
