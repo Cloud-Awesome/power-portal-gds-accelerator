@@ -8,7 +8,7 @@ The portal configuration can be imported using the [Configuration Migration Tool
 
 Look here for installation details: **[Installation](documentation/installation.md)**
 
-[[[ Put a sample screenshot - e,g. a Task List page - the functional website ]]]
+![Sample Task List](documentation/assets/sample_task_list.png)
 
 ## Configuration Entities
 
@@ -38,7 +38,7 @@ And finally, these entities require the sample solution and data to be installed
 
 [Entity Lists](documentation/configuration-entities/entity-lists.md)
 
-Usually, for each new portal I create I import everything to get up and running and then trim/delete things I don't need as I progress through the build. It's usually easier to start with something functional than with the foundation only and a blank page. 
+Usually, for each new portal I create I import everything to get up and running and then trim/delete things I don't need as I progress through the build. It's usually easier to start with something functional than with the foundation only and a blank page.
 
 ## Sample solution and data
 

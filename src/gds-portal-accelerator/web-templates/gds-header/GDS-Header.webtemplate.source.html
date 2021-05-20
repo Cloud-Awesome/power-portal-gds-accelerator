@@ -15,7 +15,7 @@
                   <a href="/" id="proposition-name"> {% editable snippets "Moving Posts/Site Name" type:"text" %} </a> 
                   <div class="pull-right">
                     {% if user != null %}
-                      <a href="/Account/Login/LogOff" class="btn sign-out" role="button">{{user.fullname}}</a>
+                      <a href="/Account/Login/LogOff" class="btn sign-out" role="button">Sign out ({{user.firstname}})</a>
                     {% endif %}
                   </div>
                 </nav>
@@ -25,10 +25,10 @@
 </header>
 <div id="global-header-bar"></div>
 {% if settings["Moving Posts/General Availability"] == "false" %}
-  <div class="phase-banner" style="margin-left: auto; margin-right:auto; max-width:960px">
+  <div class="phase-banner" style="margin-left: auto; margin-right:auto; max-width:990px">
     <p>
       <strong class="phase-tag">{{ settings["Moving Posts/Pre-GA Status"] }}</strong>
-      <span>This is a new service – your <a href="{{sitemarkers["Provide Feedback"].url}}" target="_blank">feedback</a> will help us to improve it.</span>
+      <span>This is a new service – your <a href="{{sitemarkers['Provide Feedback'].url}}" target="_blank">feedback</a> will help us to improve it.</span>
     </p>
   </div>
 {% endif %}
