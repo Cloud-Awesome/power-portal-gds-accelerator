@@ -52,10 +52,10 @@ Details can be found here:
 
 ## Best practices on GDS Power Portals
 
-- Don't use Web Forms, and why
+- [Avoid Web Forms like the plague](https://cloudawesome.uk/2021/06/16/portal-avoid-advanced-forms-like-the-plague/)
 - Structure and hierarchy of URLs/site map
 - Keep contents of a page to a single subject, minimising scrolling
-- Always include lede paragraph
+- Always include a lead paragraph
 - Prefer a "what you need" page before each section
 - Get over your great of having too many pages - it's better than fewer long pages with lots of text and/or data entry
 - Include "Check your answers" pages even if it's one page if it keeps the whole section consistent
