@@ -5,6 +5,7 @@ adx_excludefromsearch: false
 adx_hiddenfromsitemap: false
 adx_isroot: true
 adx_name: Contact - Check your answers
+adx_pagetemplateid: 90ccb476-93b9-eb11-8236-002248016e08
 adx_parentpageid: 8482b2ef-595b-eb11-a812-00224840f4d1
 adx_partialurl: check-your-answers
 adx_publishingstateid: ed67356b-a2db-49a9-b26d-4c8a59e3d9a7

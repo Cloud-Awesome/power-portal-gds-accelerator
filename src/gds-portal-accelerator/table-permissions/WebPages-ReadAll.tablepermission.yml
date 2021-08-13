@@ -1,0 +1,11 @@
+adx_append: false
+adx_appendto: false
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: adx_webpage
+adx_entityname: WebPages/ReadAll
+adx_entitypermission_webrole: []
+adx_entitypermissionid: 490d8a49-c4c3-eb11-bacc-002248418c1b
+adx_read: true
+adx_scope: 756150000
+adx_write: false

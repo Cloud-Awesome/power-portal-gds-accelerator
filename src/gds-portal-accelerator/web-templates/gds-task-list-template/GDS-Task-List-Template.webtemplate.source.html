@@ -4,6 +4,10 @@
 
 	{% assign optionalSamples = request.params["sample"] %}
 
+	{% comment %}
+		Set '?sample=happy' in the page's URL to view a 'Completed' or 'Cleared' summary box at the top of the Task List
+		This is used to show the user that they have completed the service, or the minimum required tasks
+	{% endcomment %}
 	{% if optionalSamples == "happy" %}
 		<div class="cleared-to-travel" style="padding-top: 10px;padding-bottom: 10px;padding-left: 15px;padding-right: 15px;margin-bottom: 10px">
 			<ul>
@@ -13,6 +17,10 @@
 		</div>
 	{% endif %}
 
+	{% comment %}
+		Set '?sample=unhappy' in the page's URL to view an 'Incomplete' or 'Not cleared' summary box at the top of the Task List
+		This is normally the default displayed. It is used to show the user that they have not yet completed the service, or the minimum required tasks
+	{% endcomment %}
 	{% if optionalSamples == "unhappy" %}
 		<div class="not-cleared-to-travel" style="padding-top: 10px;padding-bottom: 10px;padding-left: 15px;padding-right: 15px;">
 			<ul>				
@@ -22,24 +30,28 @@
 		</div>
 	{% endif %}
 
+	{% comment %}
+		Create a Web Link Set and relate it to the Web Page's 'Navigation' attribute
+		The child links should have two levels:
+			Level 1: The section headers (no related web page required, just title and display order)
+				Level 2: The child processes under each section (with a related web page, title and display order)
+	{% endcomment %}
 	{% assign links = weblinks[page.adx_navigation.id] %}
-    <ol class="task-list">
-		<!-- List "title" links (i.e. those with no parent, in display order -->
+    <ol class="app-task-list">
 		{% for link in links.weblinks %}
 			<li>
-				<h2 class="task-list-section">
-					<span class="task-list-section-number">
+				<h2 class="app-task-list__section">
+					<span class="app-task-list__section-number">
 						{{ link["adx_displayorder"] }}. 
 					</span> {{ link.name }}
 				</h2>
-				<ul class="task-list-items">
-					<!-- Put a link for each child link -->
+				<ul class="app-task-list__items">
 					{% for child_link in link.weblinks %}
-						<li class="task-list-item">
-							<a class="task-name" href="{{ child_link.url }}">
+						<li class="app-task-list__item">
+							<a class="app-task-list__task-name" href="{{ child_link.url }}">
 									{{ child_link.name }}
 							</a>
-							<strong class="task-completed" id="eligibility-completed">Complete</strong>
+							<strong class="govuk-tag app-task-list__tag" id="eligibility-completed">Complete</strong>
 						</li>
 					{% endfor %}
 				</ul>
@@ -81,7 +93,11 @@
 
 {% block sidebar %}
 
-	{% if request.params["sidebar"] == true %}
+	{% comment %}
+		Set '?sidebar=true' in the page's URL to view a sidebar in the right third of the screen
+		Create a web link set called "Task List Sidebar" and relate any web pages you would like to show 
+	{% endcomment %}
+	{% if request.params["sidebar"] == "true" %}
 		<!-- Get all sidebar links -->
 		{% assign sidebar = weblinks["Task List Sidebar"] %}
 		<aside class="govuk-related-items" role="complementary" style="margin-top: 0.1em;">
@@ -93,17 +109,26 @@
 							<a href="{{ sidelink.url }}">{{ sidelink.name }}</a>
 						</li>
 					{% endfor %}
-					<li>
-					<a href="{% if homeurl%}/{{ homeurl }}{% endif %}{{ website.sign_out_url_substitution }}" title="{% editable  snippets"links/logout" | default:resx["Sign_Out"] | escape %}">
-						{% editable snippets "links/logout" | default:resx["Sign_Out"] | escape %}
-					</a>
-					</li>
+					{% comment %}
+						Set GDS/DisplaySignOutLinkInSideBar (in site settings) to show a sign out link at the bottom of the list
+					{% endcomment %}
+					{% if settings["GDS/DisplaySignOutLinkInSideBar"] == "true" %}
+						<li>
+							<a href="{% if homeurl%}/{{ homeurl }}{% endif %}{{ website.sign_out_url_substitution }}" title="{% editable  snippets"links/logout" | default:resx["Sign_Out"] | escape %}">
+								{% editable snippets "links/logout" | default:resx["Sign_Out"] | escape %}
+							</a>
+						</li>
+					{% endif %}
 				</ul>
-				{% if params["debug"] == "true" %}
+
+				{% comment %}
+					Set '?debug=true' in the URL to view debug info
+						e.g. about current logged in user
+				{% endcomment %}
+				{% if request.params["debug"] == "true" %}
 					<hr/>
 					<div id="debug-info" style="font-size: 14px">
 					<ul class="list list-bullet">
-						<li>Journey Type: {{ contact_record["j.fco_journeytype"].label }}</li>
 						<li>Name: {{ user["fullname"] }}</li>
 						<li>User ID: {{ user["contactid"] }}</li>
 					</ul>

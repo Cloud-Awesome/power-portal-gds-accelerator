@@ -1,23 +1,53 @@
-<main id="content" role="main">
-	<div class="page-heading">
-		<div class="column-two-thirds">
-			{% comment %} h1, lede and copy {% endcomment %}
-			{% block headerblock %}{% endblock %}
-			
-			{% comment %} forms and assets {% endcomment %}
-			{% block mainblock %}{% endblock %}
+<div class="govuk-width-container">
 
-			{% comment %} entity form {% endcomment %}
-			{% block entityformblock %}{% endblock %}
+	{% if settings["Moving Posts/General Availability"] != "true" %}
+		<div class="govuk-phase-banner">
+			<p class="govuk-phase-banner__content">
+				<strong class="govuk-tag govuk-phase-banner__content__tag">
+					{{ settings["Moving Posts/Pre-GA Status"] }}
+				</strong>
+				<span class="govuk-phase-banner__text">
+				This is a new service – your <a class="govuk-link" href="{{sitemarkers['Provide Feedback'].url}}">feedback</a> will help us to improve it.
+				</span>
+			</p>
 		</div>
-		{% comment %}
-			Use this block when creating custom web templates that require extra 
-			content below the usual form and buttons
-		 {% endcomment %}
-		{% block customblock %}{% endblock %}
-  	</div>
-  	<div class="column-third add-title-margin">
-  		{% block sidebar %}{% endblock %}
-  	</div>
-</main>
-{% include 'LoadExternalCopy' %}
+	{% endif %}
+
+    <a href="#" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				{% comment %} h1 {% endcomment %}
+				{% block headerblock %}{% endblock %}
+			</div>
+		</div>
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">			
+				{% comment %} lead, copy, forms and assets {% endcomment %}
+				{% block mainblock %}{% endblock %}
+
+				{% comment %} 
+					Additional content inbetween content and entity form 
+					e.g. used for 'Check your answers'
+				{% endcomment %}
+				{% block additionalcontent %}{% endblock %}
+
+				{% comment %} entity form {% endcomment %}
+				{% block entityformblock %}{% endblock %}
+
+				{% comment %}
+					Use this block when creating custom web templates that require extra 
+					content below the usual form and buttons
+				{% endcomment %}
+				{% block customblock %}{% endblock %}
+			</div>
+
+			<div class="govuk-grid-column-one-third">
+				{% block sidebar %}{% endblock %}
+			</div>
+		</div>
+
+    </main>
+	{% include 'LoadExternalCopy' %}
+</div>

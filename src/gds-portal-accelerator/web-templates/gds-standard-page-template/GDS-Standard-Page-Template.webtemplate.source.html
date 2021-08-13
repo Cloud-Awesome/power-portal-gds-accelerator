@@ -1,15 +1,14 @@
 {% extends 'GDS Base Template' %}
 {% block headerblock %}
-    <div class="section-header">
-	    {{ page.adx_meta_description }}
-	</div>
-    <div>
-        <h1 class="heading-xlarge">{{ page.adx_title }}</h1>
-        <p class="lede">
-            {{ page.adx_summary }}
-        </p>
-        <p>
-            {{ page.adx_copy }}
-        </p>
-    </div>
+    <span class="govuk-caption-m">{{ page.adx_meta_description }}</span>
+    <h1 class="govuk-heading-xl">{{ page.adx_title }}</h1>
+{% endblock %}
+
+{% block mainblock %}
+    <p class="govuk-body-l">
+        {{ page.adx_summary }}
+    </p>
+    <p>
+        {{ page.adx_copy }}
+    </p>
 {% endblock %}

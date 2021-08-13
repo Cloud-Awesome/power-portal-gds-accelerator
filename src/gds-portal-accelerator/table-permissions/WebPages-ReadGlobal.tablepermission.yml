@@ -1,0 +1,12 @@
+adx_append: false
+adx_appendto: false
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: adx_webpage
+adx_entityname: WebPages/ReadGlobal
+adx_entitypermission_webrole:
+- 3af20681-fc11-4e19-8bdc-f7416d37cf61
+adx_entitypermissionid: 483e65fa-95bc-eb11-bacc-000d3ad6a08b
+adx_read: true
+adx_scope: 756150000
+adx_write: false

@@ -1,0 +1,11 @@
+- adx_adddescription: false
+  adx_attributelogicalname: awe_doyouwanttoaddextrainformation
+  adx_controlstyle: 100000000
+  adx_entityform: d5f57bfd-4dd0-eb11-bacc-000d3ad63908
+  adx_entityformmetadataid: 6992ef2d-4ed0-eb11-bacc-000d3ad63908
+  adx_fieldisrequired: false
+  adx_ignoredefaultvalue: false
+  adx_randomizeoptionsetvalues: false
+  adx_setvalueonsave: false
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: true

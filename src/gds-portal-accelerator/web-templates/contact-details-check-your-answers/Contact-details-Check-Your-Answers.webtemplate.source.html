@@ -1,49 +1,75 @@
 {% extends 'GDS EntityForm Template' %}
-{% block mainblock %}
+{% block additionalcontent %}
 
-    <div class="column-half">
-      <h3 class="heading-small">{% editable snippets "contact-details/check-your-answers/2" type:"text" %}</h2>
-    </div>
-    <div class="column-half change-details" align="right">
-      <a target="_self" href="/task-list/contact-details/phone-numbers">Change</a>
-    </div>
-	  <table class="table table-striped">
-      <tbody>
-        <tr>
-          <th scope="row">Home phone</th>
-          <td>{{user["telephone1"]}}</td>
-        </tr>
-        <tr>
-          <th scope="row">Work phone</th>
-          <td>{{ user["telephone2"] }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <h2 class="govuk-heading-m">{% editable snippets "contact-details/check-your-answers/2" type:"text" %}</h2>
 
-    <div class="column-half">
-      <h3 class="heading-small">{% editable snippets "contact-details/check-your-answers/3" type:"text" %}</h2>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Home phone
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{user["telephone1"]}}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/task-list/contact-details/phone-numbers?change=true">
+          Change<span class="govuk-visually-hidden"> home phone</span>
+        </a>
+      </dd>
     </div>
-    <div class="column-half change-details" align="right">
-      <a target="_self" href="/task-list/contact-details/email-addresses">Change</a>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Work phone
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ user["telephone2"] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/task-list/contact-details/phone-numbers?change=true">
+          Change<span class="govuk-visually-hidden"> work phone</span>
+        </a>
+      </dd>
     </div>
-	  <table class="table table-striped">
-      <tbody>
-        <tr>
-          <th scope="row">Personal email address</th>
-          <td>{{user["emailaddress2"]}}</td>
-        </tr>
-        <tr>
-          <th scope="row">Work email address</th>
-          <td>{{ user["emailaddress1"] }}</td>
-        </tr>
-      </tbody>
-    </table>
+  </dl>
 
+  <h2 class="govuk-heading-m">{% editable snippets "contact-details/check-your-answers/3" type:"text" %}</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Personal email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{user["emailaddress2"]}}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/task-list/contact-details/phone-numbers?change=true">
+          Change<span class="govuk-visually-hidden"> personal email address</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Work email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ user["emailaddress1"] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/task-list/contact-details/phone-numbers?change=true">
+          Change<span class="govuk-visually-hidden"> work email address</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+<!--
     <style>
       .change-details {
         margin-top: 20px;
         margin-bottom: 5.938px;
       }
     </style>
+-->
 
 {% endblock %}

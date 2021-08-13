@@ -1,1 +1,82 @@
-{}
+adx_entitylist:
+- RecordId: db8b6e6c-4570-eb11-a812-00224840eb43
+  DisplayName: Booking Slots
+  CheckSum: 
+  IsDeleted: true
+adx_entitypermission:
+- RecordId: dd592acc-4570-eb11-a812-00224840eb43
+  DisplayName: BookingSlots/Read
+  CheckSum: 
+  IsDeleted: true
+adx_webfile:
+- RecordId: f30c1f2d-94da-e711-9401-0003ff41f36c
+  DisplayName: fco.mp.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: dfb009a3-b664-e811-bd6d-0003ff4307db
+  DisplayName: gds-search.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 370ab315-89f7-e711-90cd-0003ff41e5df
+  DisplayName: govuk-font.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 174a9024-94da-e711-9401-0003ff41f36c
+  DisplayName: govuk-template.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 291c9356-b201-e611-80d3-00155db72521
+  DisplayName: theme.css
+  CheckSum: 
+  IsDeleted: true
+adx_webpage:
+- RecordId: 91185e9c-4570-eb11-a812-00224840eb43
+  DisplayName: Booking Slots
+  CheckSum: 
+  IsDeleted: true
+- RecordId: b750774d-e2cd-eb11-bacc-000d3ad63908
+  DisplayName: URN:UVCI:01:GG:20210615XS392#L
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 036056a2-4570-eb11-a812-00224840eb43
+  DisplayName: Booking Slots
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 6217b358-e2cd-eb11-bacc-000d3ad63908
+  DisplayName: URN:UVCI:01:GG:20210615XS392#L
+  CheckSum: 
+  IsDeleted: true
+adx_webtemplate:
+- RecordId: 412074bc-a2da-e711-a94d-000d3a2bb81e
+  DisplayName: Task List
+  CheckSum: 
+  IsDeleted: true
+annotation:
+- RecordId: 771dd6b1-d451-9802-8405-8b1d36aedf4e
+  DisplayName: all.min.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: a13daff4-400b-e611-80d5-00155d216304
+  DisplayName: bootstrap.min.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 5b814b09-f172-0739-8baa-d8c2005de9d2
+  DisplayName: fco.mp.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 8b3a6da1-b664-e811-a9ca-000d3a2bb190
+  DisplayName: gds-search.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: bb61a416-89f7-e711-a952-000d3a2bb31e
+  DisplayName: govuk-font.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: c5e0a525-94da-e711-a94d-000d3a2bb81e
+  DisplayName: govuk-template.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: fd01b2fd-0d0c-e611-80d5-00155d216304
+  DisplayName: theme.css
+  CheckSum: 
+  IsDeleted: true

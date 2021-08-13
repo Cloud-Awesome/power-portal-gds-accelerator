@@ -1,0 +1,27 @@
+{% fetchxml fetch_query %}
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+    <entity name="adx_webpage">
+        <attribute name="adx_webpageid" />
+        <attribute name="adx_name" />
+        <attribute name="createdon" />
+        <order attribute="adx_name" descending="false" />
+        <filter type="and">
+        <condition attribute="adx_name" operator="not-null" />
+        <condition attribute="adx_isroot" operator="eq" value="1" />
+        <condition attribute="adx_websiteid" operator="eq" value="{{ request.params('website-id') }}" />
+        </filter>
+    </entity>
+    </fetch>
+{% endfetchxml %} 
+{% assign results = fetch_query.results %}
+
+[
+    ["Webpage ID", "Webpage Name", "Date Created"],
+    {% for entity in results.entities %}
+        {% if forloop.last %}
+            ["{{ entity.adx_webpageid }}","{{ entity.adx_name | escape }}", "{{ entity.createdon | date: 'u' }}"]
+        {% else %}
+            ["{{ entity.adx_webpageid }}","{{ entity.adx_name | escape }}", "{{ entity.createdon | date: 'u' }}"],
+        {% endif %}
+    {% endfor %}
+]

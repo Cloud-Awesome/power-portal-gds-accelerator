@@ -1,0 +1,12 @@
+{% extends 'GDS Standard Page Template' %}
+{% block mainblock %}
+
+    <link href='{{request.url | base }}/fco.mp.css' rel="stylesheet">
+    <link href='{{request.url | base }}/bootstrap.min.css' rel="stylesheet">
+    <link href='{{request.url | base }}/govuk-template.css' rel="stylesheet">
+
+    <p>You can manage your own copy here and B2C will inject the login controls below</p>
+
+    <div id="api"></div>
+
+{% endblock %}

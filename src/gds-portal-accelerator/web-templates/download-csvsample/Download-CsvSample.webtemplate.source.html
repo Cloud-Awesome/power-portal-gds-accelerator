@@ -1,0 +1,46 @@
+{% extends 'GDS Standard Page Template' %}
+{% block mainblock %}
+    {% fetchxml fetch_query %}
+        <fetch distinct="false" mapping="logical" output-format="xml-platform" version="1.0">
+            <entity name="adx_webpage">
+                <attribute name="adx_webpageid"/>
+                <attribute name="adx_name"/>
+                <attribute name="createdon"/>
+                <order descending="false" attribute="adx_name"/>
+                <filter type="and">
+                    <condition attribute="adx_name" operator="not-null"/>
+                    <condition attribute="adx_isroot" operator="eq" value="1"/>
+                </filter>
+            </entity>
+        </fetch>
+    {% endfetchxml %} 
+    {% assign results = fetch_query.results.entities %}
+
+    <div id="csv_data"></div>
+
+    <script type="text/javascript">
+        $(function() {
+            const rows = [
+                ["Webpage ID","Webpage Name"],
+                {% for entity in results %}
+                    {% if forloop.last %}
+                        ["{{ entity.adx_webpageid }}","{{ entity.adx_name }}"]
+                    {% else %}
+                        ["{{ entity.adx_webpageid }}","{{ entity.adx_name }}"],
+                    {% endif %}
+                {% endfor %}
+            ];
+
+            let csvContent = "data:text/csv;charset=utf-8," + rows.map(e => e.join(",")).join("\n")
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            var linkText = "Download Csv file";
+            link.append(linkText);
+
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "my_data.csv");
+            link.setAttribute("title", "testser");
+            $("#csv_data").append(link);
+        });
+    </script>
+{% endblock %}

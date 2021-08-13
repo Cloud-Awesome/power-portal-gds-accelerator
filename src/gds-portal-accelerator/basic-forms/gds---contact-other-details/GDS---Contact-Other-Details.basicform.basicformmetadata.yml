@@ -20,3 +20,26 @@
   adx_setvalueonsave: false
   adx_type: 100000000
   adx_useattributedescriptionproperty: true
+- adx_adddescription: false
+  adx_attributelogicalname: awe_doyouwanttoaddextrainformation
+  adx_controlstyle: 100000000
+  adx_entityform: ad362f4b-9861-eb11-a812-000d3ad5c837
+  adx_entityformmetadataid: 9544f0fa-51fc-eb11-94ef-000d3ad67a04
+  adx_fieldisrequired: false
+  adx_ignoredefaultvalue: false
+  adx_label: >-
+    [
+
+      {
+
+        "LCID": 1033,
+
+        "Value": ""
+
+      }
+
+    ]
+  adx_randomizeoptionsetvalues: false
+  adx_setvalueonsave: false
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: true

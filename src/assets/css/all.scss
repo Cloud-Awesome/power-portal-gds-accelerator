@@ -1,12 +1,35 @@
-@import "../node_modules/govuk-frontend/govuk/all";
+@import "../../node_modules/govuk-frontend/govuk/all";
 
 // TODO - also need to bring in Task List and Step-by-step patterns
 // https://github.com/alphagov/govuk-prototype-kit/tree/master/app/assets/sass/patterns
 
+
+
 // Extends govuk-frontend for Power Apps Portals-specific elements
 // Avoid writing any new class here, prefer extending govuk-frontend to ease upgrade paths
 
-.form-control{
+html {
+  @extend .govuk-template;
+}
+
+body {
+  @extend .govuk-template__body;
+}
+
+p {
+  @extend .govuk-body;
+}
+
+.inset-section-hidden {
+  @extend .govuk-inset-text;
+  display: none;
+}
+
+.section-title {
+  display: none;
+}
+
+.form-control {
   @extend .govuk-input;
 }
 
@@ -26,6 +49,10 @@
 
 #InsertButton {
   @extend .govuk-button;
+}
+
+a {
+  @extend .govuk-link;
 }
 
 .text{
@@ -57,9 +84,9 @@ body {
   margin-bottom: 25px;
 }
 
-label {
+.field-label {
   @extend .govuk-label;
-  @extend  .govuk-label--s;
+  @extend  .govuk-label--m;
 }
 
 .crmEntityFormView .cell div.info.required label:after {
@@ -67,7 +94,7 @@ label {
 }
 
 .description {
-  @extend .govuk-fieldset__legend;
+  @extend .govuk-hint;
 }
 
 select {
@@ -114,17 +141,22 @@ select {
   }
 }
 
-.picklist-cell {
-  .control {
-    margin-top: 5px;
+.govuk-checkboxes__item {
+  input {
+    @extend .govuk-checkboxes__input;
+  }
+  label {
+    @extend .govuk-checkboxes__label;
+  }
+}
 
-    input {
-      @extend .govuk-radios__input;
-    }
+.govuk-radios__item {
+  input {
+    @extend .govuk-radios__input;
+  }
 
-    label {
-      @extend .govuk-radios__label;
-    }
+  label {
+    @extend .govuk-radios__label;
   }
 }
 
@@ -142,6 +174,77 @@ select {
   ul {
     @extend .govuk-list;
     @extend .govuk-error-summary__list;
+  }
+}
+
+// Task list pattern
+// c.f. https://govuk-prototype-kit.herokuapp.com/docs/templates/task-list
+
+.app-task-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  @include govuk-media-query($from: tablet) {
+    min-width: 550px;
+  }
+}
+
+.app-task-list__section {
+  display: table;
+  @include govuk-font($size:24, $weight: bold);
+}
+
+.app-task-list__section-number {
+  display: table-cell;
+
+  @include govuk-media-query($from: tablet) {
+    min-width: govuk-spacing(6);
+    padding-right: 0;
+  }
+}
+
+.app-task-list__items {
+  @include govuk-font($size: 19);
+  @include govuk-responsive-margin(9, "bottom");
+  list-style: none;
+  padding-left: 0;
+  @include govuk-media-query($from: tablet) {
+    padding-left: govuk-spacing(6);
+  }
+}
+
+.app-task-list__item {
+  border-bottom: 1px solid $govuk-border-colour;
+  margin-bottom: 0 !important;
+  padding-top: govuk-spacing(2);
+  padding-bottom: govuk-spacing(2);
+  @include govuk-clearfix;
+}
+
+.app-task-list__item:first-child {
+  border-top: 1px solid $govuk-border-colour;
+}
+
+.app-task-list__task-name {
+  display: block;
+  @include govuk-media-query($from: 450px) {
+    float: left;
+  }
+}
+
+// The `app-task-list__task-completed` class was previously used on the task
+// list for the completed tag (changed in 86c90ec) – it's still included here to
+// avoid breaking task lists in existing prototypes.
+.app-task-list__tag,
+.app-task-list__task-completed {
+  margin-top: govuk-spacing(2);
+  margin-bottom: govuk-spacing(1);
+
+  @include govuk-media-query($from: 450px) {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

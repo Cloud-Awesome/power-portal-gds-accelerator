@@ -1,0 +1,26 @@
+{% extends 'GDS Standard Page Template' %}
+{% block mainblock %}
+
+    <div id="csv_data"></div>
+
+    <script type="text/javascript">
+            fetch("/odata-web-pages/?website-id={{ request.params['website-id'] }}")
+                .then(response => response.json())
+                .then((data) => {
+                    const link = document.createElement("a");
+                    const linkText = "Download the Csv file";
+                    
+                    let csvContent = "data:text/csv;charset=utf-8," + encodeURIComponent(data.map(e => e.join(",")).join("\n"))
+                    
+                    link.append(linkText);
+                    link.setAttribute("href", csvContent);
+                    link.setAttribute("download", "your_csv_data_file.csv");
+                    link.setAttribute("title", "testser");
+                    $("#csv_data").append(link);
+                })
+                .catch((error) => {
+                    console.error('Do something with this error:', error);
+                });
+    </script>
+
+{% endblock %}

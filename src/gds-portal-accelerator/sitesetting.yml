@@ -76,11 +76,23 @@
 - adx_name: Authentication/OpenAuth/Facebook/AppSecret
   adx_sitesettingid: 408c2e8a-fd0f-4a6a-889b-74bd65b25c70
   importsequencenumber: 5
+- adx_description: When displaying a sidebar on task list pages, set this setting to true to display a 'Sign out' link as the last link in the list
+  adx_name: GDS/DisplaySignOutLinkInSideBar
+  adx_sitesettingid: 424d7ab4-3efc-eb11-94ef-000d3ad67478
+  adx_value: true
 - adx_name: ThemeFeature
   adx_sitesettingid: 459361c4-2412-eb11-a813-0022483f5646
   adx_value: '{"status":"disable","selectedThemeId":"df88c9ca-e24f-4eca-af9a-880e7b8559a0","siteSettingId":""}'
 - adx_name: Authentication/OpenAuth/LinkedIn/ConsumerSecret
   adx_sitesettingid: 46d664b6-8aa6-4637-a7d0-c1d4c88057a9
+- adx_description: >-
+    Used to render external hosted HTML on a portal page.
+
+
+    For example, host .html files in an Azure Blob Storage container or your corporate CMS to allow content to be displayed within the portal and maintained by users with no access to the Portal Management app
+  adx_name: ExternalCopy/BaseUrl
+  adx_sitesettingid: 5b1d5e34-3bfc-eb11-94ef-000d3ad67478
+  adx_value: '** INSERT YOUR EXTERNAL COPY BASE URL HERE **'
 - adx_description: 'The amount of time the Authentication/LoginThrottling/MaxInvaildAttemptsFromIPAddress are to be within before the IP address has to wait Authentication/LoginThrottling/IpAddressTimeoutTimeSpan. Default: 00:03:00 (3 mins)'
   adx_name: Authentication/LoginThrottling/MaxAttemptsTimeLimitTimeSpan
   adx_sitesettingid: 5e86e832-e06f-4ae1-9afc-1ee759e7793e
