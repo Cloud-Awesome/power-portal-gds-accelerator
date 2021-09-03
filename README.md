@@ -18,17 +18,17 @@ Look here for installation details: **[Installation](documentation/installation.
 
 [Web Files](documentation/configuration-entities/web-files.md)
 
-[Site Settings](documentation/configuration-entities/site-settings.md)
+Site Settings
 
-[Content Snippets]()
+Content Snippets
 
-[Web Pages](documentation/configuration-entities/web-pages.md)
+Web Pages
 
-[Web Link Sets](documentation/configuration-entities/web-link-sets.md)
+Web Link Sets
 
-[Entity Forms](documentation/configuration-entities/entity-forms.md)
+Entity Forms
 
-[Entity Lists](documentation/configuration-entities/entity-lists.md)
+Entity Lists
 
 ## Sample solution and data (TODO)
 
@@ -36,11 +36,11 @@ To enable a fully functional portal with sufficient data to allow for sample ent
 
 Details can be found here:
 
-[Sample Solution](documentation/sample-solution.md)
+[Sample Solution]()
 
-[Sample Entity Data](documentation/sample-data-entities/sample-entity.md)
+[Sample Entity Data]()
 
-## Best practices on GDS Power Portals
+## Best practices on GDS Power Portals (TODO)
 
 - [Avoid Web Forms like the plague](https://cloudawesome.uk/2021/06/16/portal-avoid-advanced-forms-like-the-plague/)
 - Structure and hierarchy of URLs/site map
@@ -53,7 +53,7 @@ Details can be found here:
 
 ## Feedback and Suggestions
 
-I'm always happy to receive feedback, bug reports or any pull requests submitted.
+I'm always happy to receive [feedback](https://twitter.com/Arthur82), [questions, bug reports, or feature requests](https://github.com/Cloud-Awesome/power-portal-gds-accelerator/issues/new/choose)
 
 Hope this repo helps someone get up and running faster and if there's something manual that is taking more time to get up and running, let me know!
 
