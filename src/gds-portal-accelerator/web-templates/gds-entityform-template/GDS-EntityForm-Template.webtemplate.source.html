@@ -1,5 +1,8 @@
 {% extends 'GDS Standard Page Template' %}
 {% block entityformblock %}
+    {% if page.adx_entitylist %}
+        {% entitylist id: page.adx_entitylist.id %}
+    {% endif %}
     {% if page.adx_entityform %}
         {% entityform id: page.adx_entityform.id %}
     {% endif %}

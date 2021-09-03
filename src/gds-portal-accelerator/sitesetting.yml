@@ -196,14 +196,14 @@
   adx_name: ProductFiltering/DisplayArticlesWithoutAssociatedProducts
   adx_sitesettingid: da0f9755-5d3f-47c5-bd25-9062d319395c
   adx_value: True
-- adx_name: Moving Posts/Pre-GA Status
+- adx_name: GdsService/PreGAStatus
   adx_sitesettingid: dc1f1184-3729-e811-a9b9-000d3a2bb1de
   adx_value: ALPHA
 - adx_name: Search/Enabled
   adx_sitesettingid: e7aa396d-60c9-475b-940b-58eb4fff8c9a
   adx_value: true
 - adx_description: If the product is in Alpha or Beta, set this to false
-  adx_name: Moving Posts/General Availability
+  adx_name: GdsService/GeneralAvailability
   adx_sitesettingid: e9a3a439-3629-e811-a9b9-000d3a2bb1de
   adx_value: false
 - adx_name: DisableValidationWebTemplate
