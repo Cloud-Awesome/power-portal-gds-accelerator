@@ -4,15 +4,13 @@ Base framework for a Dynamics 365/PowerApps Portal using GDS styling and pattern
 
 Importing the sample solution and all data gives you a fully functional portal with example pages for further extension
 
-The portal configuration can be imported using the [Configuration Migration Tool]() from the Dynamics 365 SDK
+The portal configuration can be imported using the [Power Apps Cli](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli#standalone-power-platform-cli)
 
 Look here for installation details: **[Installation](documentation/installation.md)**
 
 ![Sample Task List](documentation/assets/sample_task_list.png)
 
 ## Configuration Entities
-
-These are the bare minimum entities required:
 
 [Web Templates](documentation/configuration-entities/web-templates.md)
 
@@ -26,21 +24,15 @@ These are the bare minimum entities required:
 
 [Content Snippets]()
 
-Including these entities will also provide sample pages and dependant data required to give a functional set of pro forma pages for extension:
-
 [Web Pages](documentation/configuration-entities/web-pages.md)
 
 [Web Link Sets](documentation/configuration-entities/web-link-sets.md)
-
-And finally, these entities require the sample solution and data to be installed but will give you a fully functional sample GDS-styled portal
 
 [Entity Forms](documentation/configuration-entities/entity-forms.md)
 
 [Entity Lists](documentation/configuration-entities/entity-lists.md)
 
-Usually, for each new portal I create I import everything to get up and running and then trim/delete things I don't need as I progress through the build. It's usually easier to start with something functional than with the foundation only and a blank page.
-
-## Sample solution and data
+## Sample solution and data (TODO)
 
 To enable a fully functional portal with sufficient data to allow for sample entity forms and lists, this repo also includes a basic solution with a single entity and sample data to populate it.
 
