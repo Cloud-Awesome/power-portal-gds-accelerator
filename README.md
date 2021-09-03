@@ -18,8 +18,6 @@ Look here for installation details: **[Installation](documentation/installation.
 
 [Web Files](documentation/configuration-entities/web-files.md)
 
-[Websites](documentation/configuration-entities/websites.md)
-
 [Site Settings](documentation/configuration-entities/site-settings.md)
 
 [Content Snippets]()
