@@ -13,10 +13,10 @@ Once installed, simply:
 ```powershell
 pac auth create `
     --name NameYourEnvironmentForFutureUse `
-    --applicationId YouAppRegistrationId `
-    --clientSecret YourAppRegistrationSecret `
-    --tenant YourAppRegistrationAdTenantId `
     --url YourTargetCrmEnvironmentUrl
+    #--applicationId YouAppRegistrationId `
+    #--clientSecret YourAppRegistrationSecret `
+    #--tenant YourAppRegistrationAdTenantId `
 
 pac auth list
 ```
@@ -30,7 +30,7 @@ pac paportal upload `
 
 The source in this repo works out of the box if the portal you have installed is using the Customer template. 
 
-If you have any other template installed (e.g. Partner portal, Employee self-service) then the upload will create a new set of records instead of updating the existing records. This is absolutely fine, but means you will have to update the target portal binding in the Power Apps portal admin center
+If you have any other template installed (e.g. Partner portal, Employee self-service) then the upload will create a new set of records instead of updating the existing records. This is absolutely fine (in some respects could be better), but means you will have to update the target portal binding in the Power Apps portal admin center
 
 ![](assets/update_portal_binding.png)
 

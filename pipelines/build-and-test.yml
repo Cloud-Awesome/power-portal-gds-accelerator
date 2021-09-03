@@ -1,0 +1,15 @@
+﻿name: $(Year:yyyy).$(Month).$(DayOfMonth).$(Rev:r)
+
+pool:
+  vmImage: 'windows-latest'
+
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - src/*
+
+steps:
+# TODO - future enhancement: deploy to a build env using pac, run some selenium tests, fail on error the build on error

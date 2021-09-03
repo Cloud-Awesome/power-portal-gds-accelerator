@@ -1,0 +1,26 @@
+﻿name: $(Year:yyyy).$(Month).$(DayOfMonth).$(Rev:r)
+
+pool:
+  vmImage: 'windows-latest'
+
+trigger: none
+
+steps:
+  # TODO - future enhancement: deploy to a build env using pac, run some selenium tests, fail on error the build on error
+    
+  - task: GitHubRelease@1
+    displayName: Create GitHub Release with ChangeLog
+    inputs:
+      gitHubConnection: 'GitHubReleaseConnection'
+      repositoryName: '$(Build.Repository.Name)'
+      action: 'create'
+      target: '$(Build.SourceVersion)'
+      tagSource: 'userSpecifiedTag'
+      tag: '$(Build.BuildNumber)'
+      title: '$(Build.BuildNumber)'
+      releaseNotesSource: 'inline'
+      assets: $(Build.ArtifactStagingDirectory)/src/gds-portal-accelerator/*
+      changeLogCompareToRelease: 'lastFullRelease'
+      changeLogType: 'issueBased'
+      changeLogLabels: '[{ "label" : "enhancement", "displayName" : "New features", "state" : "closed" }, { "label" : "bug", "displayName" : "Bugs fixed", "state" : "closed" }, { "label" : "documentation", "displayName" : "Documentation added", "state" : "closed" }]'
+
