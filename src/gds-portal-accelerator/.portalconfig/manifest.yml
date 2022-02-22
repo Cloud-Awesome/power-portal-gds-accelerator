@@ -1,4 +1,13 @@
+adx_entityform:
+- RecordId: 1fad09da-d67e-ec11-8d21-6045bd0e6787
+  DisplayName: CDPS Service
+  CheckSum: 
+  IsDeleted: true
 adx_entitylist:
+- RecordId: 55d6e5f4-d67e-ec11-8d21-6045bd0e6787
+  DisplayName: CDPS Services
+  CheckSum: 
+  IsDeleted: true
 - RecordId: db8b6e6c-4570-eb11-a812-00224840eb43
   DisplayName: Booking Slots
   CheckSum: 
@@ -30,6 +39,14 @@ adx_webfile:
   CheckSum: 
   IsDeleted: true
 adx_webpage:
+- RecordId: 3b8cafb5-3ebd-ea11-a812-000d3a7fedbe
+  DisplayName: Build
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 348cafb5-3ebd-ea11-a812-000d3a7fedbe
+  DisplayName: Build
+  CheckSum: 
+  IsDeleted: true
 - RecordId: 6217b358-e2cd-eb11-bacc-000d3ad63908
   DisplayName: URN:UVCI:01:GG:20210615XS392#L
   CheckSum: 
@@ -52,6 +69,14 @@ adx_webtemplate:
   CheckSum: 
   IsDeleted: true
 annotation:
+- RecordId: c5211dd6-d31d-72d7-ae21-bee55106ec5c
+  DisplayName: bootstrap.min.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: fbc3df8c-c27d-6fa0-9190-c7c9bd377369
+  DisplayName: all.min.css
+  CheckSum: 
+  IsDeleted: true
 - RecordId: fd01b2fd-0d0c-e611-80d5-00155d216304
   DisplayName: theme.css
   CheckSum: 

@@ -1,38 +1,41 @@
-<main id="content" role="main">
-  <div class="column-two-thirds">
-    <div class="page-heading">
-      <h1 class="heading-xlarge">Sign in</h1>
-    </div>
+{% extends 'GDS Base Template' %} {% block headerblock %}
+<h1 class="govuk-heading-xl">Sign in</h1>
+{% endblock %} {% block mainblock %}
+<p class="lede">Sign in using the details you have been emailed.</p>
 
-    <p class="lede">Sign in using the details you have been emailed.</p>
+<p>You will be logged out if inactive for over 20 minutes.</p>
 
-    <p>You will be logged out if inactive for over 20 minutes.</p>
+<div id="sign-in-submit">&nbsp;</div>
 
-    <div id="sign-in-submit">&nbsp;</div>
+<h2 class="heading-large">Problems signing in</h2>
 
-    <h2 class="heading-large">Problems signing in</h2>
+<p><a href="">Forgotten email</a>
+</p>
 
-    <p><a href="">Forgotten email</a>
-    </p>
+<p><a href="">Forgotten password</a>
+</p>
 
-    <p><a href="">Forgotten password</a>
-    </p>
+<p>&nbsp;</p>
 
-    <p>&nbsp;</p>
+<hr>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var signinForm = $("button.btn-primary").parent().parent().parent().parent().parent().parent()
+    signinForm.find("label.control-label.required:before").hide();
 
-    <hr>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var signinForm = $("button[type=submit]").parent().parent().parent()
-        signinForm.find("span").hide();
-        $(".nav.nav-tabs.nav-account").hide();
+    $(".form-group").addClass("govuk-form-group");
+    $("label").addClass("govuk-label govuk-label--m");
 
-        //$("form").hide();
-        $("#sign-in-submit").append(signinForm);
+    $(".form-control").addClass("govuk-input govuk-input--width-20").removeClass("form-control");
 
-        $("button[type=submit]").html("Continue");
-        $("button[type=submit]").addClass("button");
-      });
-    </script>
-  </div>
-</main>
+    $(".nav.nav-tabs.nav-account").hide();
+
+    $("#sign-in-submit").append(signinForm);
+
+    $("button.btn-primary").html("Continue");
+    $("button.btn-primary").addClass("govuk-button");
+  });
+</script>
+
+
+{% endblock %}

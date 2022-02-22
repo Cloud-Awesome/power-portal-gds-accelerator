@@ -1,8 +1,8 @@
 # Installation
 
-The [portal configuration source code](/src/gds-portal-accelerator) has been extracted using the [Power Apps Cli](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli#standalone-power-platform-cli) (version 1.9.4)
+The [portal configuration source code](/src/gds-portal-accelerator) has been extracted using the [Power Apps Cli](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli#standalone-power-platform-cli) (version 1.12.2)
 
-![](assets/portal_source_folder_structure.png)
+![/src/gds-portal-accelerator](assets/portal_source_folder_structure.png)
 
 Download the CLI (or the VS Code extension) before continuing.
 
@@ -33,5 +33,7 @@ The source in this repo works out of the box if the portal you have installed is
 If you have any other template installed (e.g. Partner portal, Employee self-service) then the upload will create a new set of records instead of updating the existing records. This is absolutely fine (in some respects could be better), but means you will have to update the target portal binding in the Power Apps portal admin center
 
 ![](assets/update_portal_binding.png)
+
+As usual, you may also have to reset the server side cache for changes to take affect. If CSS or other changes still don't take affect, try viewing the portal using 'In Private Browsing' to confirm that there aren't cached versions on your local machine 
 
 For more info on authentication and other commands in the pac cli see here: [Power Apps Cli](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli)

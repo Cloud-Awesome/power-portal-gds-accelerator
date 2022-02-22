@@ -70,7 +70,7 @@
   adx_value: true
   importsequencenumber: 5
 - adx_description: Current home page on gov.uk
-  adx_name: FCO Website/Home Page
+  adx_name: GOV.UK/Home Page
   adx_sitesettingid: 37c31541-c426-e811-a9be-000d3a2bb91c
   adx_value: https://www.gov.uk
 - adx_name: Authentication/OpenAuth/Facebook/AppSecret
@@ -88,11 +88,13 @@
 - adx_description: >-
     Used to render external hosted HTML on a portal page.
 
-
     For example, host .html files in an Azure Blob Storage container or your corporate CMS to allow content to be displayed within the portal and maintained by users with no access to the Portal Management app
+
+
+    ** INSERT YOUR EXTERNAL COPY BASE URL HERE **
   adx_name: ExternalCopy/BaseUrl
   adx_sitesettingid: 5b1d5e34-3bfc-eb11-94ef-000d3ad67478
-  adx_value: '** INSERT YOUR EXTERNAL COPY BASE URL HERE **'
+  adx_value: https://your-storage-account.blob.core.windows.net/your-target-container
 - adx_description: 'The amount of time the Authentication/LoginThrottling/MaxInvaildAttemptsFromIPAddress are to be within before the IP address has to wait Authentication/LoginThrottling/IpAddressTimeoutTimeSpan. Default: 00:03:00 (3 mins)'
   adx_name: Authentication/LoginThrottling/MaxAttemptsTimeLimitTimeSpan
   adx_sitesettingid: 5e86e832-e06f-4ae1-9afc-1ee759e7793e
@@ -112,18 +114,26 @@
   adx_value: 00:10:00
 - adx_name: Authentication/OpenIdConnect/B2C/DefaultPolicyId
   adx_sitesettingid: 7350a19b-8761-eb11-a812-000d3ad5c837
-  adx_value: https://awesomeb2c.b2clogin.com/tfp/b18f0f5c-5e71-4f45-8361-dac925fa6558/b2c_1_awesome_signup_user_flow/v2.0/
+  adx_value: '** INSERT YOUR DEFAULT B2C USER FLOW URI HERE **'
+  statecode: 1
+  statuscode: 2
 - adx_name: Authentication/OpenIdConnect/B2C/ValidIssuers
   adx_sitesettingid: 7583d271-8761-eb11-a812-000d3ad5c837
-  adx_value: https://awesomeb2c.b2clogin.com/tfp/b18f0f5c-5e71-4f45-8361-dac925fa6558/b2c_1_awesome_signup_user_flow/v2.0/,https://awesomeb2c.b2clogin.com/b18f0f5c-5e71-4f45-8361-dac925fa6558/v2.0/,https://awesomeb2c.b2clogin.com/tfp/b18f0f5c-5e71-4f45-8361-dac925fa6558/b2c_1_portal_google_sign_in_up/v2.0/
+  adx_value: '** INSERT A COMMA-DELIMITED LIST OF ALL VALID USER FLOW URIs HERE **'
+  statecode: 1
+  statuscode: 2
 - adx_description: Sign up/Sign Policy Issuer
   adx_name: Authentication/OpenIdConnect/B2C/Authority
   adx_sitesettingid: 76da36db-8561-eb11-a812-000d3ad5c837
-  adx_value: https://awesomeb2c.b2clogin.com/tfp/b18f0f5c-5e71-4f45-8361-dac925fa6558/b2c_1_awesome_signup_user_flow/v2.0/
+  adx_value: '** INSERT YOUR PRINCIPLE B2C USERFLOW URI HERE **'
+  statecode: 1
+  statuscode: 2
 - adx_description: B2C Signin URL
   adx_name: Authentication/OpenIdConnect/B2C/RedirectUri
   adx_sitesettingid: 7c39c552-8661-eb11-a812-000d3ad5c837
-  adx_value: https://awesome-portal.powerappsportals.com/signin-B2C
+  adx_value: '** INSERT YOUR BASE PORTAL URL HERE **/signin-B2C'
+  statecode: 1
+  statuscode: 2
 - adx_name: Authentication/OpenAuth/Twitter/ConsumerKey
   adx_sitesettingid: 83782a91-1946-44de-8026-ad5ca8bd7dde
   importsequencenumber: 5
@@ -154,6 +164,8 @@
 - adx_name: Authentication/OpenIdConnect/B2C/ExternalLogoutEnabled
   adx_sitesettingid: af43b564-8661-eb11-a812-000d3ad5c837
   adx_value: true
+  statecode: 1
+  statuscode: 2
 - adx_name: Webapi/error/innererror
   adx_sitesettingid: b7acdecd-a2e7-ea11-a817-0022483f5646
   adx_value: true
@@ -166,7 +178,9 @@
 - adx_description: Password reset policy issuer
   adx_name: Authentication/OpenIdConnect/B2C/PasswordResetPolicyId
   adx_sitesettingid: c0f8e553-8761-eb11-a812-000d3ad5c837
-  adx_value: https://awesomeb2c.b2clogin.com/b18f0f5c-5e71-4f45-8361-dac925fa6558/v2.0/
+  adx_value: '** INSERT YOUR B2C FORGOT PASSWORD USER FLOR URI HERE **'
+  statecode: 1
+  statuscode: 2
 - adx_name: Authentication/OpenAuth/LinkedIn/ConsumerKey
   adx_sitesettingid: c25b4fad-f8fc-4377-b008-9e5840ea45d5
 - adx_description: >-
@@ -216,7 +230,9 @@
 - adx_description: App Registration ID
   adx_name: Authentication/OpenIdConnect/B2C/ClientId
   adx_sitesettingid: f12522ed-8561-eb11-a812-000d3ad5c837
-  adx_value: 36bed772-652b-4459-965c-076d42329c71
+  adx_value: '** INSERT YOUR B2C APP REG CLIENT ID HERE **'
+  statecode: 1
+  statuscode: 2
 - adx_description: URL for Alpha/Beta feedback collection
   adx_name: Moving Posts/Pre-GA Status/Url
   adx_sitesettingid: f2b5beaf-3729-e811-a9b9-000d3a2bb1de

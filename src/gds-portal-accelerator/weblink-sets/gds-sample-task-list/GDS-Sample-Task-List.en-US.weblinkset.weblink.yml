@@ -46,7 +46,7 @@
   adx_weblinksetid: 49713d9f-4f5b-eb11-a812-00224840fc77
 - adx_disablepagevalidation: false
   adx_displayimageonly: false
-  adx_displayorder: 1
+  adx_displayorder: 2
   adx_displaypagechildlinks: false
   adx_name: Travel requirements
   adx_openinnewwindow: false
@@ -101,7 +101,7 @@
   adx_weblinksetid: 49713d9f-4f5b-eb11-a812-00224840fc77
 - adx_disablepagevalidation: false
   adx_displayimageonly: false
-  adx_displayorder: 2
+  adx_displayorder: 1
   adx_displaypagechildlinks: false
   adx_name: Complete your profile
   adx_openinnewwindow: false

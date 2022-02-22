@@ -15,6 +15,10 @@ body {
   @extend .govuk-template__body;
 }
 
+fieldset {
+  border: none;
+}
+
 p {
   @extend .govuk-body;
 }
@@ -30,6 +34,7 @@ p {
 
 .form-control {
   @extend .govuk-input;
+  border: 2px solid #0b0c0c !important;
 }
 
 .tab-column {

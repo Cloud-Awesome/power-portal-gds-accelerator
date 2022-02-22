@@ -6561,12 +6561,20 @@ select:focus::-ms-value {
   }
 }
 
+fieldset {
+  border: none;
+}
+
 .inset-section-hidden {
   display: none;
 }
 
 .section-title {
   display: none;
+}
+
+.form-control {
+  border: 2px solid #0b0c0c !important;
 }
 
 .tab-column {
